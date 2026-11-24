@@ -1,50 +1,93 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MEDINEXO</title>
-    <script type="importmap"></script>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/MEDINEXO.styles.css" asp-append-version="true" />
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MEDINEXO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark medinexo-navbar">
+            <div class="container">
+
+                <a class="navbar-brand medinexo-brand" asp-controller="Home" asp-action="Index">
+                    <span class="brand-icon">M</span>
+                    MEDINEXO<span class="brand-dot">.</span>
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
+                        aria-expanded="false"
+                        aria-label="Abrir navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto gap-lg-3">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" href="#inicio">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" href="#especialidades">Especialidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#consultorios">Consultorios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
                         </li>
                     </ul>
+
+                    <div class="d-flex gap-2 mt-3 mt-lg-0">
+                        <a href="#acceso" class="btn btn-outline-light btn-login">
+                            Iniciar sesión
+                        </a>
+                        <a href="#contacto" class="btn btn-medinexo">
+                            Contáctanos
+                        </a>
+                    </div>
                 </div>
+
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="medinexo-footer">
         <div class="container">
-            &copy; 2026 - MEDINEXO - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6">
+                    <a class="footer-brand" asp-controller="Home" asp-action="Index">
+                        MEDINEXO<span>.</span>
+                    </a>
+                    <p class="footer-description mb-0">
+                        Conectando especialistas, espacios y pacientes.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 footer-copyright">
+                        © @DateTime.Now.Year MEDINEXO. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

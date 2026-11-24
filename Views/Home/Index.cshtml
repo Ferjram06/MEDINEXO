@@ -1,8 +1,208 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- HERO -->
+<section class="hero-section" id="inicio">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+                <div class="hero-tag">
+                    HEALTHCARE TECHNOLOGY PLATFORM
+                </div>
+
+                <h1 class="hero-title">
+                    El futuro de la medicina comienza en
+                    <span>MEDINEXO.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Un nuevo concepto de torre médica donde especialistas,
+                    consultorios independientes y pacientes se conectan
+                    mediante una plataforma inteligente de gestión médica.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#especialidades" class="btn btn-medinexo btn-lg">
+                        Explorar especialidades
+                    </a>
+
+                    <a href="#consultorios"
+                       class="btn btn-outline-light btn-lg">
+                        Conocer la torre
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="hero-visual">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1000"
+                        alt="Instalaciones modernas de una institución médica"
+                        class="hero-image" />
+
+                    <div class="hero-floating-card">
+                        <span class="status-dot"></span>
+                        <strong>Atención especializada</strong>
+                        <div class="small text-secondary mt-1">
+                            Espacios diseñados para tu bienestar
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="section-padding" id="especialidades">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <div class="section-label">Nuestros servicios</div>
+
+            <h2 class="section-title">
+                Especialidades médicas
+            </h2>
+
+            <p class="section-description mx-auto">
+                Encuentra profesionales de distintas áreas de la salud
+                dentro de una misma infraestructura médica.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="specialty-card">
+                    <div class="specialty-icon">♡</div>
+                    <h5>Cardiología</h5>
+                    <p>Atención especializada para la salud cardiovascular.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="specialty-card">
+                    <div class="specialty-icon">✚</div>
+                    <h5>Medicina general</h5>
+                    <p>Evaluación médica y atención integral del paciente.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="specialty-card">
+                    <div class="specialty-icon">◈</div>
+                    <h5>Dermatología</h5>
+                    <p>Diagnóstico y tratamiento de afecciones de la piel.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="specialty-card">
+                    <div class="specialty-icon">⌁</div>
+                    <h5>Neurología</h5>
+                    <p>Atención especializada del sistema nervioso.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- MEDICAL OFFICES -->
+<section class="section-padding section-dark" id="consultorios">
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+                <div class="section-label">Infraestructura médica</div>
+
+                <h2 class="section-title">
+                    Un espacio diseñado para cada especialista.
+                </h2>
+
+                <p class="section-description">
+                    MEDINEXO integra un concepto de consultorios
+                    independientes, permitiendo que cada profesional
+                    gestione su espacio de atención dentro de una
+                    infraestructura médica centralizada.
+                </p>
+
+                <a href="#contacto" class="btn btn-medinexo mt-3">
+                    Conoce nuestros espacios
+                </a>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="office-panel">
+
+                    <div class="office-feature">
+                        <h5>01. Consultorios independientes</h5>
+                        <p>Espacios destinados a profesionales de distintas especialidades.</p>
+                    </div>
+
+                    <div class="office-feature">
+                        <h5>02. Gestión centralizada</h5>
+                        <p>Administración organizada de citas y espacios médicos.</p>
+                    </div>
+
+                    <div class="office-feature">
+                        <h5>03. Conectividad digital</h5>
+                        <p>Una plataforma que facilita la interacción entre pacientes y especialistas.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-padding" id="nosotros">
+    <div class="container text-center">
+
+        <div class="section-label">Nuestra visión</div>
+
+        <h2 class="section-title">
+            Tecnología al servicio de la salud.
+        </h2>
+
+        <p class="section-description mx-auto">
+            Creemos en una infraestructura médica moderna donde
+            la organización, la tecnología y la atención especializada
+            trabajan en conjunto para mejorar la experiencia de cada usuario.
+        </p>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section-padding" id="contacto">
+    <div class="container">
+        <div class="cta-panel text-center">
+
+            <div class="section-label">MEDINEXO</div>
+
+            <h2 class="section-title">
+                Conectamos personas. Impulsamos la salud.
+            </h2>
+
+            <p class="mx-auto mb-4">
+                Descubre una nueva manera de gestionar y acceder
+                a servicios médicos especializados.
+            </p>
+
+            <a href="#inicio" class="btn btn-medinexo btn-lg">
+                Explorar MEDINEXO
+            </a>
+
+        </div>
+    </div>
+</section>
